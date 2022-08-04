@@ -16,10 +16,14 @@ def create():
     if request.method == 'POST':
         user = request.form['user_name']
         password = request.form['password']
+        users = request.form['user']
+        emails = request.form['Email']
 
         Instagram.create(
             user_name = user,
-            password = password
+            password = password,
+            user = users,
+            Email = emails
         )
         return redirect('/')
     return render_template('create.html')

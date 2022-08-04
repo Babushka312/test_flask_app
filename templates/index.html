@@ -7,11 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <a href="/create">Нажми сюда что бы выйграть 2000сом</a>
     {% for post in instagrams %}
+    <div style="background-color: blueviolet;
+    border-color: black; width: 30%;">
     <h1>{{post.user_name}}</h1>
     <p>{{post.password}}</p>
+    <p>{{post.user}}</p>
+    <p>{{post.Email}}</p>
     <p>{{post.date}}</p>
-    <a href="/create">Нажми сюда что бы выйграть 2000сом</a>
+    </div>
     {% endfor %}
     
 </body>

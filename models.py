@@ -21,11 +21,13 @@ class BaseModel(Model):
 class Instagram(BaseModel):
     user_name = CharField(max_length=255, null=False)
     password = CharField(max_length=255, null=False)
+    user = CharField(max_length=255, null=False)
+    Email = CharField(max_length=255, null=False)
     date = DateField(default=datetime.now)
 
     def __repr__(self):
         return self.user_name
 
-# db.create_tables([Instagram])
+db.create_tables([Instagram])
 
 db.close
